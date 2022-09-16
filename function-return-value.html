@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Return Value</title>
+</head>
+<body>
+<script>
+
+    function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+    }
+
+    const result = sayHello("Achmad", "Roziqin");
+    document.writeln(`<p>${result}</p>`);
+
+    function getFinalScore(value) {
+        if (value > 90) {
+            return "A";
+        } else if (value > 80) {
+            return "B";
+        } else if (value > 70) {
+            return "C";
+        } else if (value > 60) {
+            return "D";
+        } else {
+            return "E";
+        }
+    }
+
+    const finalScore = getFinalScore(60);
+    document.writeln(`<p>${finalScore}</p>`);
+
+    function isConstains(array, searchValue) {
+        for (const element of array) {
+            console.info(`Iterasi Element ${element}`);
+            if (element === searchValue) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const array = [1, 32, 214, 434, 565, 42, 5, 7, 9];
+    const searchValue = 434;
+    const found = isConstains(array, searchValue);
+    document.writeln(`<p>${found}</p>`)
+
+</script>
+</body>
+</html>
